@@ -11,7 +11,12 @@ import argparse
 import os
 import logging
 import functools
+import sys
 
+ROOT_DIR = os.path.abspath("../")
+sys.path.append(ROOT_DIR)
+sys.path.append(os.path.abspath("."))
+print(os.getcwd())
 import torch
 from maskrcnn_benchmark.config import cfg
 from maskrcnn_benchmark.data import make_data_loader
