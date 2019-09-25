@@ -22,10 +22,10 @@ $(aws ec2 describe-instances --instance-ids $instanceId)
 # EOF
 
 ssh -i "ssh/nvidia1.pem" ubuntu@ec2-3-90-107-74.compute-1.amazonaws.com <<EOF
-git clone https://$username:$token@github.com/BITASIA/myvision-model.git
-# cd DeepLearningExamples/PyTorch/Segmentation/MaskRCNN/pytorch && git pull && \
-# bash scripts/docker/build.sh && \
-# bash scripts/docker/interactive.sh /home/ubuntu/myvision-model/MaskRCNN-NVIDIA/data
+git clone https://github.com/BITASIA/myvision-maskrcnn-benchmark.git
+cd myvision-maskrcnn-benchmark/pytorch && git pull && \
+bash scripts/docker/build.sh && \
+bash scripts/docker/interactive.sh /home/ubuntu/myvision-model/MaskRCNN-NVIDIA/data
 # bash scripts/train.sh
 exit
 EOF

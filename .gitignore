@@ -1,2 +1,4 @@
+# Exclude the config files
 config/
+# Exclude the key
 ssh/
